@@ -1,0 +1,37 @@
+Microsoft Windows [Version 10.0.22631.3447]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\gelli>python
+Python 3.12.2 (tags/v3.12.2:6abddd9, Feb  6 2024, 21:26:36) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import random
+>>>
+>>> # List of common first names and last names
+>>> first_names = ["John", "Emma", "Michael", "Sophia", "Matthew", "Olivia", "Daniel", "Ava", "Christopher", "Isabella"]
+>>> last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Garcia", "Rodriguez", "Martinez"]
+>>>
+>>> # Generate 10 INSERT commands
+>>> insert_commands = []
+>>> for i in range(10):
+...     person_id = 100000413 + i
+...     fname = random.choice(first_names)
+...     lname = random.choice(last_names)
+...     phone_number = "555" + str(random.randint(1000000, 9999999))  # Generate a random phone number
+...     insert_command = f"insert into person values ({person_id}, '{fname}', '{lname}', '{phone_number}');"
+...     insert_commands.append(insert_command)
+...
+>>> # Print the INSERT commands
+>>> for command in insert_commands:
+...     print(command)
+...
+insert into person values (100000413, 'Daniel', 'Miller', '5552291641');
+insert into person values (100000414, 'Christopher', 'Smith', '5552900994');
+insert into person values (100000415, 'Matthew', 'Miller', '5552621359');
+insert into person values (100000416, 'Emma', 'Rodriguez', '5554798661');
+insert into person values (100000417, 'Matthew', 'Rodriguez', '5554740810');
+insert into person values (100000418, 'Emma', 'Martinez', '5559277004');
+insert into person values (100000419, 'John', 'Williams', '5551431232');
+insert into person values (100000420, 'Michael', 'Williams', '5551406237');
+insert into person values (100000421, 'John', 'Brown', '5553991285');
+insert into person values (100000422, 'Olivia', 'Williams', '5551133147');
+>>>
